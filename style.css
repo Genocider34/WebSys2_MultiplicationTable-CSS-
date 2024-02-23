@@ -1,0 +1,49 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: teal;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  margin: 1em;
+}
+
+h1 {
+  color: white;
+  margin-bottom: 1em;
+}
+
+table {
+  width: 70%;
+  border-radius: 5px;
+  background-color: white;
+}
+
+th,
+tr,
+td {
+  border-radius: 5px;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 0.5em;
+  border: 1px solid black;
+}
+
+th {
+  background-color: gray;
+}
+
+.diagonal {
+  background-color: goldenrod;
+  font-weight: 600;
+}
+
+td:hover {
+  background-color: greenyellow;
+  cursor: pointer;
+  transition: background-color 0.1s ease-in;
+  border: 1px solid salmon;
+}
