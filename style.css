@@ -1,6 +1,6 @@
 @font-face {
   font-family: "headFont";
-  src: url("ALUMINECRE.ttf");
+  src: url("space-age.regular.ttf");
 }
 
 @font-face {
@@ -8,12 +8,18 @@
   src: url('SPACE.ttf');
 }
 
+@font-face {
+  font-family: 'xFont';
+  src: url('elasis rg.ttf');
+}
 
 body {
-  background:  url('https://images.unsplash.com/photo-1611107875582-684c70574042?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat ;
-  background-size: cover;
   font-family: allFont;
   color: white;
+  background:black url(http://fc01.deviantart.net/fs71/f/2012/160/b/9/stars_by_paulinemoss-d52un4e.jpg);
+  animation: stars 205s linear alternate;
+  overflow: hidden;
+  
 }
 
 main {
@@ -26,25 +32,33 @@ main {
 
 h1 {
   font-family: headFont;
+  font-size: 4rem;
   margin-bottom: 0.2em;
   letter-spacing: 15px;
   padding: 0 0.3em;
+  background: linear-gradient(to right, #f32170, #ff6b08,#cf23cf, #eedd44);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+#x-text {
+  font-family: xFont;
 }
 
 .border {
+  -webkit-box-shadow: 0 4px 6px -6px #222;
+  -moz-box-shadow: 0 4px 6px -6px #222;
   border-bottom: 3px solid rgb(0, 255, 234);
   box-shadow: 0 0 25px rgb(0, 255, 234);
-  opacity: 0.5;
+  opacity: 0.8;
   width: 90%;
   margin-bottom: 2em;
 }
 
 table {
   width: 70%;
-  background-color: transparent;
-  border: transparent;
-  box-shadow: 2px 3px 6px 1px rgb(0, 255, 234);
-  /* transition:  1.2s ease-in-out; */
+  box-shadow: rgba(0, 255, 253, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  table-layout: fixed;
 }
 
 
@@ -52,10 +66,9 @@ table {
 th,
 tr,
 td {
-  border-radius: 5px;
   font-size: 1.3rem;
   text-align: center;
-  padding: 0.2em;
+  padding: 0.1em;
   background-color: rgb(207, 207, 207, 0.2);
   border: 1px solid rgb(255, 255, 255,0.5);
 }
@@ -63,19 +76,18 @@ td {
 tr {
   background:rgb(0, 0, 0,0.5);
   letter-spacing: 4px;
- }
+}
 
 th {
-  background-color: rgb(207, 207, 207, 0.4);
+  background-color: rgb(207, 207, 207, 0.3);
 }
 
 .diagonal {
-  border: 1px solid white;
+  background-color: rgb(207, 207, 207, 0.4);
 }
 
 td {
-  border: rgb(0, 255, 234);
-  /* box-shadow: 0 0 25px rgb(0, 255, 234); */
+  border: 0.1px;
 }
 
 td:hover {
@@ -94,4 +106,37 @@ td:hover {
   box-shadow: 0 0 1px rgb(0, 255, 234),
               0 0 5px rgb(0, 255, 234),
               0 0 10px rgb(0, 255, 234);
+}
+
+
+
+
+/* EARTH ANIMATION
+REFERRENCE: https://codepen.io/manz/pen/XbjxMR
+*/
+#box {
+  background:url(https://cdn.rawgit.com/ManzDev/cursos-assets/gh-pages/css3/earth-2.jpg);
+  background-size:cover;
+  border:2px solid #000;
+  border-radius:50%;
+  width:200px;
+  height:200px;
+  animation: movimiento 5s linear 0s infinite;
+  box-shadow:0 0 25px RGBA(255,255,255, 0.10),
+             -8px -8px 15px #000 inset,
+             2px 2px 25px #000 inset,
+             -45px -45px 25px RGBA(0,0,0, 0.5) inset, 
+             25px 25px 45px RGBA(0,0,0, 0.45) inset;
+  margin:2em auto;
+  transform:rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+}
+
+@keyframes movimiento {
+  0% { background-position:0 0 }
+  100% { background-position:355px 0 }
+}
+
+@keyframes stars {
+  0% { background-position:0 0 }
+  100% { background-position:0 100% }
 }

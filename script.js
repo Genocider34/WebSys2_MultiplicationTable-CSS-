@@ -1,5 +1,14 @@
-const select = document.querySelector('td');
+const select = document.querySelectorAll('td');
 
-select.addEventListener('click', () => {
-    select.classList.toggle('active');
+select.forEach(x => {
+    x.addEventListener('click', () => {
+        removeSelect();
+        x.classList.toggle('active');
+    })
 })
+
+function removeSelect() {
+    select.forEach(x => {
+        x.classList.remove('active');
+    })
+}
